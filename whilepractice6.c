@@ -8,7 +8,7 @@ int main() {
         scanf("%d", &n);
     } while(n>=0);
     printf("합 : %d", sum);*/
-    printf("\n에제15==========\n");
+    /*printf("\n문제2==========\n");
     int i, num;
 
     i=1;
@@ -19,5 +19,24 @@ int main() {
             printf("%d ", i);
         }
         i++;
+    }*/
+    printf("\n문제3==========\n");
+    int i, su, cnt=0;
+
+    printf("숫자 입력 : ");
+    scanf("%d", &su);
+
+    i=1;
+    while(i<=su) {
+        if(su%=i==0) {
+            cnt++;
+        }
+        i++;
+    }
+    if(cnt==2) {
+        printf("%d은(는) 소수\n", su);
+    }
+    else {
+        printf("%d은(는) 소수가 아님\n", su);
     }
 }
