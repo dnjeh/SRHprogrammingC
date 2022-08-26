@@ -28,7 +28,7 @@ int main() {
 
     i=1;
     while(i<=su) {
-        if(su%=i==0) {
+        if(su%i==0) {
             cnt++;
         }
         i++;
