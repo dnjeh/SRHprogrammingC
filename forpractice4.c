@@ -84,15 +84,47 @@ void exam5() {
     } 
 }
 void exam6() {
-    int i, j;
+    int i, j, k;
     for(i=2;i<=9;i++) {
         printf("*** %d단 *** \n", i);
         for(j=1;j<=9;j++) {
             printf("%d * %d = %2d", i, j, i*j);
+            printf("\n");
+        }
+        printf("\n");
+    }
+
+    
+    for(j=0;j<=9;j++) {
+        for(i=2;i<=5;i++) {
+            if(j==0) {
+                printf("*** %d단 ***  ", i);
+            }
+            else {
+                printf("%d * %d = %2d\t", i, j, i*j);
+            }
+        }
+        printf("\n");
+    }
+    printf("\n");
+    for(j=0;j<=9;j++) {
+        for(i=6;i<=9;i++) {
+            if(j==0) {
+                printf("*** %d단 ***     ", i);
+            }
+            else {
+                printf("%d * %d = %2d\t", i, j, i*j);
+            }
         }
         printf("\n");
     }
 }
 void exam7() {
-    
+    //예제23
+    int i = 0;
+    while(i<=20) {
+        i++;
+        if(i%2==0) continue;
+        printf("%d \n", i);
+    }
 }
