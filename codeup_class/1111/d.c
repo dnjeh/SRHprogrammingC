@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+    int i, j, n, t=1;
+    scanf("%d", &n);
+    int a[n][n];
+    for(i=0;i<n;i++) {
+        for(j=n-1;j>=0;j--) {
+            a[j][i]=t++;
+        }
+    }
+    for(i=0;i<n;i++) {
+        for(j=0;j<n;j++) {
+            printf("%d ", a[i][j]);
+        }
+        printf("\n");
+    }
+}
