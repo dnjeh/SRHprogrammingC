@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 void exam1(){
     int a[4][2];
@@ -7,7 +8,7 @@ void exam1(){
     double avg;
 
     for(i=0;i<4;i++) {
-        printf("%d¹ø ÇÐ»ýÀÇ ¼öÇÐ, C¾ð¾î ¼ºÀû ÀÔ·Â : ", i+1);
+        printf("%dï¿½ï¿½ ï¿½Ð»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, Cï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ : ", i+1);
         for(j=0;j<2;j++) {
             scanf("%d", &a[i][j]);
         }
@@ -18,8 +19,8 @@ void exam1(){
             tot+=a[i][j];
         }
         avg=tot/2.0;
-        printf("%d¹ø ÇÐ»ýÀÇ ", i+1);
-        printf("ÃÑÁ¡ : %3d, Æò±Õ %.2lf\n", tot, avg);
+        printf("%dï¿½ï¿½ ï¿½Ð»ï¿½ï¿½ï¿½ ", i+1);
+        printf("ï¿½ï¿½ï¿½ï¿½ : %3d, ï¿½ï¿½ï¿½ %.2lf\n", tot, avg);
     }
 }
 
@@ -27,7 +28,7 @@ void exam2(){
     int arr[5];
     int max, min, i;
     for(i=0;i<5;i++) {
-        printf("ÀÔ·Â: ");
+        printf("ï¿½Ô·ï¿½: ");
         scanf("%d", &arr[i]);
     }
     max=min=arr[0];
@@ -35,34 +36,34 @@ void exam2(){
         if(max<arr[i]) max=arr[i];
         if(min>arr[i]) min=arr[i];
     }
-    printf("ÃÖ´ë°ª: %d\n", max);
-    printf("ÃÖ¼Ú°ª: %d\n", min);
+    printf("ï¿½Ö´ë°ª: %d\n", max);
+    printf("ï¿½Ö¼Ú°ï¿½: %d\n", min);
 }
 
 void exam3(){
     int arr[5], sum=0, i;
     float avg=0.0;
     for(i=0;i<5;i++) {
-        printf("%d¶ó¿îµå Á¡¼ö : ", i+1);
+        printf("%dï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : ", i+1);
         scanf("%d", &arr[i]);
         sum=sum+arr[i];
     }
     avg=sum/5.0;
-    printf("\nÃÑÁ¡Àº %dÁ¡ÀÌ¸ç, Æò±ÕÀº %.2lfÁ¡ ÀÔ´Ï´Ù.", sum, avg);
+    printf("\nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ %dï¿½ï¿½ï¿½Ì¸ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ %.2lfï¿½ï¿½ ï¿½Ô´Ï´ï¿½.", sum, avg);
 }
 
 void exam4(){
     int i, su, cnt = 0;
     int b[10]={25, 7, 25, 7, 3, 25, 3, 7, 25, 1};
 
-    printf("µ¥ÀÌÅÍ : ");
+    printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ");
     scanf("%d", &su);
     for(i=0;i<10;i++) {
         if(b[i]==su) {
             cnt++;
         }
     }
-    printf("%dÀº(´Â) %d°³ ÀÖ½À´Ï´Ù.\n", cnt);
+    printf("%dï¿½ï¿½(ï¿½ï¿½) %dï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.\n", cnt);
 }
 
 void exam5(){
@@ -115,15 +116,39 @@ void exam7(){
     }
 }
 void exam8(){
+    int data[6], i;
 
+    for(i=0;i<6;i++) {
+        printf("ì •ìˆ˜ë¥¼ ìž…ë ¥ : ");
+        scanf("%d", &data[i]);
+    }
+    for(i=5;i>=0;i--) {
+        printf("%d ", data[i]);
+    }
 }
 
 void exam9(){
+    char voca[50];
+    int len=0;
+    printf("ì˜ë‹¨ì–´ ìž…ë ¥: ");
+    scanf("%s", voca);
 
+    while(voca[len]!='\0') {
+        len++;
+    }
+    printf("ìž…ë ¥í•œ ì˜ë‹¨ì–´ì˜ ê¸¸ì´ëŠ” %d\n", len);
+    
 }
 
 void exam10(){
-
+    char str[100];
+    int i;
+    strlen(str);
+    printf("strì˜ ë¬¸ìžê¸¸ì´ : %d\n", strlen(str));
+    
+    for(i=strlen(str)-1;i>=0;i--) {
+        printf("%c", str[i]);
+    }
 }
 
 void exam11(){
@@ -160,9 +185,9 @@ void exam17(){
 main(){
 	int num;
 	while(1){
-    	printf("\n¹®Á¦ ¹øÈ£ ÀÔ·Â : ");
+    	printf("\nï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ ï¿½Ô·ï¿½ : ");
 		scanf("%d", &num);
-		printf("%d¹ø ¹®Á¦===========================\n", num);
+		printf("%dï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½===========================\n", num);
 		switch(num){
 			case 1: exam1(); break;
 			case 2: exam2(); break;
